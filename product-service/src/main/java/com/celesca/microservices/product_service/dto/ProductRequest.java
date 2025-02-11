@@ -1,3 +1,5 @@
 package com.celesca.microservices.product_service.dto;
 
-public record ProductRequest(String id, String name, String description, String price) { }
+import java.math.BigDecimal;
+
+public record ProductRequest(String id, String name, String description, BigDecimal price) { }

@@ -1,5 +1,6 @@
 package com.celesca.microservices.product_service.controller;
 
+import com.celesca.microservices.product_service.dto.ProductRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,6 +11,6 @@ public class ProductController {
     @GetMapping
     @ResponseStatus(HttpStatus.CREATED)
     public void createProduct(@RequestBody ProductRequest productRequest) {
-
+        // Create product
     }
 }
