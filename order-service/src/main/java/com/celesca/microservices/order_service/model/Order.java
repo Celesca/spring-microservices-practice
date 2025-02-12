@@ -10,10 +10,6 @@ import java.math.BigDecimal;
 
 @Entity
 @Table(name = "t_orders")
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Order {
 
     @Id
@@ -23,4 +19,16 @@ public class Order {
     private String skuCode;
     private BigDecimal price;
     private Integer quantity;
+
+    public Order(String orderNumber, String skuCode, BigDecimal price, Integer quantity) {
+        this.orderNumber = orderNumber;
+        this.skuCode = skuCode;
+        this.price = price;
+        this.quantity = quantity;
+    }
+
+
+    public Order() {
+
+    }
 }

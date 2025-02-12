@@ -3,16 +3,18 @@ package com.celesca.microservices.order_service.service;
 import com.celesca.microservices.order_service.dto.OrderRequest;
 import com.celesca.microservices.order_service.model.Order;
 import com.celesca.microservices.order_service.repository.OrderRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.UUID;
 
 @Service
-@RequiredArgsConstructor
 public class OrderService {
 
     private final OrderRepository orderRepository;
+
+    public OrderService(OrderRepository orderRepository) {
+        this.orderRepository = orderRepository;
+    }
 
     public void placeOrder(OrderRequest orderRequest) {
         // map OrderRequest to Order object
