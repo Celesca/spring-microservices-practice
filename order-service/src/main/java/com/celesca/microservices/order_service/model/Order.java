@@ -1,7 +1,5 @@
 package com.celesca.microservices.order_service.model;
-
 import jakarta.persistence.*;
-
 import java.math.BigDecimal;
 
 @Entity
